@@ -1,0 +1,33 @@
+{
+  "name": "unified-tryout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jan Florian Dietrich <jfd@daenen4.de> (http://www.daenen4.de/)",
+  "license": "ISC",
+  "dependencies": {
+    "fast-equals": "^1.0.5",
+    "mdast-squeeze-paragraphs": "^3.0.2",
+    "remark-frontmatter": "^1.1.0",
+    "remark-highlight.js": "^5.0.0",
+    "remark-html": "^6.0.1",
+    "remark-html-katex": "^1.0.2",
+    "remark-math": "^1.0.3",
+    "remark-parse": "^4.0.0",
+    "shortid": "^2.2.8",
+    "unified": "^6.1.6",
+    "unist-util-find-after": "^2.0.1",
+    "unist-util-find-all-after": "^1.0.1",
+    "unist-util-is": "^2.1.1",
+    "unist-util-map": "^1.0.3",
+    "unist-util-modify-children": "^1.1.1",
+    "unist-util-parents": "^1.0.0",
+    "unist-util-select": "^1.5.0",
+    "unist-util-visit": "^1.2.0",
+    "vfile-reporter": "^4.0.0"
+  }
+}
