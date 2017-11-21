@@ -24,7 +24,6 @@
     "hast-util-to-html": "^3.1.0",
     "mdast-squeeze-paragraphs": "^3.0.2",
     "mdast-util-to-hast": "^2.5.0",
-    "remark-frontmatter": "^1.1.0",
     "remark-highlight.js": "^5.0.0",
     "remark-html": "^6.0.1",
     "remark-html-katex": "^1.0.2",
