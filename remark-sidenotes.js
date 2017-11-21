@@ -108,11 +108,11 @@ function transformer(tree) {
     if (replaceMap.has(node.identifier)) {
       const replacement = replaceMap.get(node.identifier)
 
-      if (deepEqual(replacement.anchor, node)) {
+      if (deepEqual(replacement.anchorNode, node)) {
         parent.children.splice(index, 1, ...replacement.replacement)
       }
 
-      if (deepEqual(replacement.target, node)) {
+      if (deepEqual(replacement.targetNode, node)) {
         parent.children.splice(0)
       }
     }
