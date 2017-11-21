@@ -66,6 +66,16 @@ const extractNoteFromHtml = (target, note) => {
 const coerceToHtml = nodeArray =>
   nodeArray.map(node => toHTML(toHAST(node))).join('')
 
+const unpackNotesInParagraph = noteAst => {
+  if (noteAst.type === 'paragraph') {
+    noteAst.data = {
+      hName: 'span',
+    }
+  }
+
+  return noteAst
+}
+
 const getNoteBodyAst = targetNode => {
   // Sidenotes can appear as children or on root level, depending on that they will be wrapped in a paragraph or not
   // we need to differentiate so we co not match the whole document after the sidenote
@@ -73,7 +83,7 @@ const getNoteBodyAst = targetNode => {
     targetNode.parent.type === 'root' ? findAfter : findAllAfter
   const notes = searchMethod(targetNode.parent, targetNode)
 
-  return Array.isArray(notes) ? notes : [notes]
+  return Array.isArray(notes) ? notes : [unpackNotesInParagraph(notes)]
 }
 
 function transformer(tree) {
@@ -115,6 +125,12 @@ function transformer(tree) {
       if (deepEqual(replacement.targetNode, node)) {
         parent.children.splice(0)
       }
+    }
+  })
+
+  visit(tree, 'definition', (node, index, parent) => {
+    if (replaceMap.has(node.identifier)) {
+      parent.children.splice(index, 2)
     }
   })
 
