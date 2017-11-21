@@ -8,31 +8,38 @@ const math = require('remark-math')
 const katex = require('remark-html-katex')
 const report = require('vfile-reporter')
 const slug = require('remark-slug')
-const frontmatter = require('remark-frontmatter')
 const textr = require('remark-textr')
 const sidenotes = require('./remark-sidenotes')
-const toSection = require('./remark-p-to-section')
+const wrapInSection = require('./remark-wrap-in-section')
 
 const textrBase = require('typographic-base')
 
-const md = fs.readFileSync(path.resolve(__dirname, 'tufte.md'))
+const md = fs.readFileSync(path.resolve(__dirname, 'section.md'))
 
-unified()
-  .use(markdown)
-  .use(math)
-  .use(katex)
-  .use(highlight)
-  .use(slug)
-  .use(sidenotes)
-  .use(frontmatter)
-  .use(textr, {
-    plugins: [textrBase],
-  })
-  // .use(toSection)
-  .use(html)
-  //   .parse(md);
-  .process(md, (err, file) => {
-    console.error(report(err || file))
-    fs.writeFileSync(path.resolve(__dirname, 'output.html'), String(file))
-    console.log(String(file))
-  })
+const convert = inputMd => {
+  try {
+    const result = unified()
+      .use(markdown)
+      .use(math)
+      .use(katex)
+      .use(highlight)
+      .use(slug)
+      .use(sidenotes)
+      .use(textr, {
+        plugins: [textrBase],
+      })
+      .use(wrapInSection)
+      .use(html)
+      .processSync(inputMd)
+
+    return String(result)
+  } catch (err) {
+    console.error(report(err))
+  }
+}
+
+module.exports = convert
+
+const result = convert(md)
+fs.writeFileSync(path.resolve(__dirname, 'output.html'), result)
+console.dir(result, { depth: null })
