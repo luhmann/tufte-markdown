@@ -1,0 +1,26 @@
+---
+parser: babel-eslint
+extends:
+  - xo
+  - prettier
+  - plugin:jest/recommended
+env:
+  es6: true
+  jest: true
+plugins:
+  - prettier
+  - jest
+rules:
+  prettier/prettier:
+  - error
+  - trailingComma: es5
+    singleQuote: true
+    semi: false
+  jest/no-disabled-tests: warn
+  jest/no-focused-tests: error
+  jest/no-identical-title: error
+  jest/valid-expect: error
+  react/react-in-jsx-scope: none
+  max-nested-callbacks:
+  - error
+  - 20
