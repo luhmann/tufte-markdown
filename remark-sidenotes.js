@@ -1,11 +1,6 @@
-const visit = require('unist-util-visit')
 const shortid = require('shortid')
+const visit = require('unist-util-visit')
 const select = require('unist-util-select')
-const findAfter = require('unist-util-find-after')
-const parents = require('unist-util-parents')
-const findAllAfter = require('unist-util-find-all-after')
-const deepEqual = require('fast-equals').deepEqual
-const squeezeParagraphs = require('mdast-squeeze-paragraphs')
 const toHAST = require('mdast-util-to-hast')
 const toHTML = require('hast-util-to-html')
 
@@ -48,93 +43,50 @@ const getReplacement = ({ isMarginNote, noteHTML }) => {
   ]
 }
 
-const extractNoteFromHtml = (target, note) => {
-  // Marginnote identifier can either appear in text
-  // or when targetNode is parsed as type=definition as its url-property
-  const matches = note.match(/(:\s+)*({-})*\s*((.|\n)+)/)
-  const hasMarginNoteUrl =
-    target.type === 'definition' &&
-    target.url &&
-    target.url === MARGINNOTE_SYMBOL
+const coerceToHtml = nodeArray =>
+  nodeArray.map(node => toHTML(toHAST(node))).join('') || ''
+
+const extractNoteFromHtml = note => {
+  const matches = note.match(/(\s+)*({-})*\s*((.|\n)+)/)
 
   return {
-    isMarginNote: matches[2] === MARGINNOTE_SYMBOL || hasMarginNoteUrl,
+    isMarginNote: matches[2] === MARGINNOTE_SYMBOL,
     noteHTML: matches[3],
   }
 }
 
-const coerceToHtml = nodeArray =>
-  nodeArray.map(node => toHTML(toHAST(node))).join('')
-
-const unpackNotesInParagraph = noteAst => {
-  if (noteAst.type === 'paragraph') {
-    noteAst.data = {
-      hName: 'span',
-    }
-  }
-
-  return noteAst
-}
-
-const getNoteBodyAst = targetNode => {
-  // Sidenotes can appear as children or on root level, depending on that they will be wrapped in a paragraph or not
-  // we need to differentiate so we co not match the whole document after the sidenote
-  const searchMethod =
-    targetNode.parent.type === 'root' ? findAfter : findAllAfter
-  const notes = searchMethod(targetNode.parent, targetNode)
-
-  return Array.isArray(notes) ? notes : [unpackNotesInParagraph(notes)]
-}
-
 function transformer(tree) {
-  const replaceMap = new Map()
-  const parentsTree = parents(tree)
-  const sidenotes = select(parentsTree, 'linkReference[identifier^=^]')
-  const ids = [...new Set(sidenotes.map(item => item.identifier))]
-
-  ids.forEach(id => {
-    const nodes = select(parentsTree, `*[identifier=${id}]`)
-    const [anchorNode, targetNode] = nodes.sort(
-      (a, b) => a.position.start.line - b.position.start.line
+  visit(tree, 'footnoteReference', (node, index, parent) => {
+    const target = select(
+      tree,
+      `footnoteDefinition[identifier=${node.identifier}]`
     )
-    // console.log('👉', anchorNode)
-    // console.log('🎯', targetNode)
 
-    const noteContent = getNoteBodyAst(targetNode)
-    const noteDetail = extractNoteFromHtml(
-      targetNode,
-      coerceToHtml(noteContent)
-    )
-    const replacement = getReplacement(noteDetail)
+    if (!target) throw new Error('No coresponding note found')
 
-    replaceMap.set(id, {
-      anchorNode,
-      targetNode,
-      replacement,
-    })
+    const notesAst =
+      target[0].children.length && target[0].children[0].type === 'paragraph'
+        ? target[0].children[0].children
+        : target[0].children
+
+    const nodeDetail = extractNoteFromHtml(coerceToHtml(notesAst))
+
+    parent.children.splice(index, 1, ...getReplacement(nodeDetail))
   })
 
-  visit(tree, 'linkReference', (node, index, parent) => {
-    if (replaceMap.has(node.identifier)) {
-      const replacement = replaceMap.get(node.identifier)
-
-      if (deepEqual(replacement.anchorNode, node)) {
-        parent.children.splice(index, 1, ...replacement.replacement)
-      }
-
-      if (deepEqual(replacement.targetNode, node)) {
-        parent.children.splice(0)
-      }
-    }
+  visit(tree, 'footnoteDefinition', (node, index, parent) => {
+    parent.children.splice(index, 1)
   })
 
-  visit(tree, 'definition', (node, index, parent) => {
-    if (replaceMap.has(node.identifier)) {
-      parent.children.splice(index, 2)
-    }
-  })
+  // "Inline" Footnotes which do not have two parts
+  // Syntax: [^{-} <markdown>]
+  visit(tree, 'footnote', (node, index, parent) => {
+    const notesAst = node.children
 
-  squeezeParagraphs(tree)
+    const nodeDetail = extractNoteFromHtml(coerceToHtml(notesAst))
+
+    parent.children.splice(index, 1, ...getReplacement(nodeDetail))
+  })
 }
 
 module.exports = sidenotes
