@@ -62,3 +62,8 @@ the Napoleon's March data visualization. From *Beautiful Evidence*, page
 ![Figurative map of the successive losses of the French Army in the Russian
 campaign, 1812-1813](https://placeimg.com/1000/600/tech)
 </figure>
+
+<!-- break -->
+
+^[{-} From Edward Tufte, *Visual Display of Quantitative Information*, page 92.]
+![Exports and Imports to and from Denmark & Norway from 1700 to 1780](img/exports-imports.png)
