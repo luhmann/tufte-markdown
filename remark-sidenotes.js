@@ -56,6 +56,9 @@ const extractNoteFromHtml = note => {
 }
 
 function transformer(tree) {
+  // "Regular" Sidenotes/Marginnotes consisting of a reference and a definition
+  // Syntax for Sidenotes [^<number>] and somewhere else [^<number]: <markdown>
+  // Syntax for Marginnotes [^<descriptor>] and somewhere else [^<descriptor]: {-}
   visit(tree, 'footnoteReference', (node, index, parent) => {
     const target = select(
       tree,
@@ -78,11 +81,11 @@ function transformer(tree) {
     parent.children.splice(index, 1)
   })
 
-  // "Inline" Footnotes which do not have two parts
+  // "Inline" Sidenotes which do not have two parts
   // Syntax: [^{-} <markdown>]
   visit(tree, 'footnote', (node, index, parent) => {
+    console.log()
     const notesAst = node.children
-
     const nodeDetail = extractNoteFromHtml(coerceToHtml(notesAst))
 
     parent.children.splice(index, 1, ...getReplacement(nodeDetail))

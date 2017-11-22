@@ -1,45 +1,31 @@
 const fs = require('fs')
 const path = require('path')
-const unified = require('unified')
-const markdown = require('remark-parse')
-const html = require('remark-html')
-const highlight = require('remark-highlight.js')
-const math = require('remark-math')
-const katex = require('remark-html-katex')
 const report = require('vfile-reporter')
-const slug = require('remark-slug')
-const textr = require('remark-textr')
-const sidenotes = require('./remark-sidenotes')
-const wrapInSection = require('./remark-wrap-in-section')
 
-const textrBase = require('typographic-base')
+const configureParser = require('./parser')
 
-const md = fs.readFileSync(path.resolve(__dirname, 'section.md'))
+const md = fs.readFileSync(path.resolve(__dirname, 'figures.md'))
 
-const convert = inputMd => {
-  try {
-    const result = unified()
-      .use(markdown)
-      .use(math)
-      .use(katex)
-      .use(highlight)
-      .use(slug)
-      .use(sidenotes)
-      .use(textr, {
-        plugins: [textrBase],
-      })
-      .use(wrapInSection)
-      .use(html)
-      .processSync(inputMd)
+const setup = (options = {}) => {
+  const parser = configureParser(options)
 
-    return String(result)
-  } catch (err) {
-    console.error(report(err))
+  return inputMd => {
+    try {
+      const result = parser.processSync(inputMd)
+
+      return options.react ? result.contents : String(result)
+    } catch (err) {
+      console.error(report(err))
+    }
   }
 }
 
-module.exports = convert
+const convert = setup()
+
+module.exports = setup
 
 const result = convert(md)
+
+console.log('====================== OUT =================')
 fs.writeFileSync(path.resolve(__dirname, 'output.html'), result)
-console.dir(result, { depth: null })
+console.dir(result)

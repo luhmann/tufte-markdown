@@ -1,11 +1,3 @@
----
-title: Tufte CSS
-subtitle: Dave Liepmann
-header-includes:
-- '<link rel="stylesheet" href="latex.css"/>'
----
-
-
 Tufte CSS provides tools to style web articles using the ideas demonstrated by
 Edward Tufte's books and handouts. Tufte's style is known for its simplicity,
 extensive use of sidenotes, tight integration of graphics with text, and
@@ -14,9 +6,9 @@ carefully chosen typography.
 Tufte CSS was created by [Dave Liepmann][dl] and is now an Edward Tufte project.
 The original idea was cribbed from
 [Tufte-<span class="latex">L<span class="latex-sup">a</span>T<span
-class="latex-sub">e</span>X</span>][tufte-latex] and [R Markdown's Tufte Handout
-format][r-markdown]. We give hearty thanks to all the people who have
-contributed to those projects.
+class="latex-sub">e</span>X</span>][tufte-latex]
+and [R Markdown's Tufte Handout format][r-markdown]. We give hearty thanks to
+all the people who have contributed to those projects.
 
 [dl]: http://www.daveliepmann.com
 [tufte-latex]: https://tufte-latex.github.io/tufte-latex/
@@ -30,14 +22,13 @@ Please note the [contribution guidelines][contrib].
 [contrib]: https://github.com/edwardtufte/tufte-css#contributing
 
 Finally, a reminder about the goal of this project. The web is not print.
-Webpages are not books. Therefore, the goal of Tufte CSS is not to say
-"websites should look like this interpretation of Tufte's books" but rather
-"here are some techniques Tufte developed that we've found useful in print;
-maybe you can find a way to make them useful on the web". Tufte CSS is merely
-a sketch of one way to implement this particular set of ideas. It should be a
-starting point, not a design goal, because any project should present their
-information as best suits their particular circumstances.
-
+Webpages are not books. Therefore, the goal of Tufte CSS is not to say "websites
+should look like this interpretation of Tufte's books" but rather "here are some
+techniques Tufte developed that we've found useful in print; maybe you can find
+a way to make them useful on the web". Tufte CSS is merely a sketch of one way
+to implement this particular set of ideas. It should be a starting point, not a
+design goal, because any project should present their information as best suits
+their particular circumstances.
 
 ## Getting Started
 
@@ -52,7 +43,6 @@ block:
 Now you just have to use the provided CSS rules, and the Tufte CSS conventions
 described in this document. For best results, View Source and Inspect Element
 frequently.
-
 
 ## Fundamentals
 
@@ -75,8 +65,9 @@ heading of level 4 or greater, consider redesigning your document:
 > organize.
 >
 > <footer>
-> [Edward Tufte, forum post, 'Book design: advice and examples' thread][quote-cite]
-> </footer>
+[Edward Tufte, forum post, 'Book design: advice and examples' thread][quote-cite]
+
+</footer>
 
 [quote-cite]: http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB
 
@@ -109,12 +100,11 @@ images.
 
 In print, Tufte has used the proprietary Monotype Bembo[^2] font. A similar
 effect is achieved in digital formats with the now open-source
-[ETBook][et-book], which Tufte CSS supplies with a `@font-face`
-reference to a .ttf file. In case ETBook somehow doesn't work, Tufte CSS shifts
-gracefully to other serif fonts like Palatino and Georgia.
+[ETBook][et-book], which Tufte CSS supplies with a `@font-face` reference to a
+.ttf file. In case ETBook somehow doesn't work, Tufte CSS shifts gracefully to
+other serif fonts like Palatino and Georgia.
 
-[^2]:
-  See Tufte's comment in the [Tufte book fonts][bembo-thread] thread.
+[^2]: See Tufte's comment in the [Tufte book fonts][bembo-thread] thread.
 
 [bembo-thread]: http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt
 [et-book]: https://github.com/edwardtufte/et-book
@@ -129,17 +119,14 @@ Tufte's sans-serif font of choice.
 </p>
 
 Links in Tufte CSS match the body text in color and do not change on mouseover
-or when clicked. Here is a [dummy example](#) that goes nowhere.
-These links are underlined, since this is the most widely recognized indicator
-of clickable text. [^blue] However, because most browsers' default underlining
-does not clear descenders and is so thick and distracting, the underline effect
-is instead achieved using CSS trickery involving background gradients instead of
-standard `text-decoration`. Credit goes to Adam Schwartz for that technique.
+or when clicked. Here is a [dummy example](#) that goes nowhere. These links are
+underlined, since this is the most widely recognized indicator of clickable
+text. [^blue] However, because most browsers' default underlining does not clear
+descenders and is so thick and distracting, the underline effect is instead
+achieved using CSS trickery involving background gradients instead of standard
+`text-decoration`. Credit goes to Adam Schwartz for that technique.
 
-[^blue]:
-  {-} Blue text, while also a widely recognizable clickable-text indicator, is
-  crass and distracting. Luckily, it is also rendered unnecessary by the use of
-  underlining.
+[^blue]: {-} Blue text, while also a widely recognizable clickable-text indicator, is crass and distracting. Luckily, it is also rendered unnecessary by the use of underlining.
 
 As always, these design choices are merely one approach that Tufte CSS provides
 by default. Other approaches, such as changing color on click or mouseover, or
@@ -147,7 +134,6 @@ using highlighting or color instead of underlining to denote links, could also
 be made to work. The goal is to make sentences readable without interference
 from links, as well as to make links immediately identifiable even by casual web
 users.
-
 
 ## Epigraphs
 
@@ -165,23 +151,25 @@ users.
 > relations, for Nature cannot be fooled.
 >
 > <footer>
-> Richard P. Feynman, <cite>"What Do You Care What Other People Think?"</cite>
-> </footer>
+Richard P. Feynman, <cite>"What Do You Care What Other People Think?"</cite>
+
+</footer>
 
 <!-- break blockquote -->
 
 > I do not paint things, I paint only the differences between things.
 >
 > <footer>
-> Henri Matisse, <cite>Henri Matisse Dessins: thèmes et variations</cite>
-> (Paris, 1943), 37
-> </footer>
+Henri Matisse, <cite>Henri Matisse Dessins: thèmes et variations</cite>
+(Paris, 1943), 37
+
+</footer>
 
 </div>
 
 If you'd like to introduce your page or a section of your page with some quotes,
 use epigraphs. Modeled after chapter epigraphs in Tufte's books (particularly
-*Beautiful Evidence*), these are `blockquote` elements with a bit of specialized
+_Beautiful Evidence_), these are `blockquote` elements with a bit of specialized
 styling. Quoted text is italicized. The source goes in a `footer` element inside
 the `blockquote`. We have provided three examples in the epigraph of this
 section, demonstrating shorter and longer quotes, with and without a paragraph
@@ -201,16 +189,16 @@ are very astute.
 Sidenotes are a great example of the web not being like print. On sufficiently
 large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and
 small figures. On smaller viewports, elements that would go in the margin are
-hidden until the user toggles them into view. The goal is to present related
-but not necessary information such as asides or citations *as close as possible*
-to the text that references them. At the same time, this secondary information
+hidden until the user toggles them into view. The goal is to present related but
+not necessary information such as asides or citations _as close as possible_ to
+the text that references them. At the same time, this secondary information
 should stay out of the way of the eye, not interfering with the progression of
 ideas in the main text.
 
 Sidenotes consist of two elements: a superscript reference number that goes
-inline with the text, and a sidenote with content. To add the former, just put
-a label and dummy checkbox into the text where you want the reference to go,
-like so:
+inline with the text, and a sidenote with content. To add the former, just put a
+label and dummy checkbox into the text where you want the reference to go, like
+so:
 
 ```
 <label for="sn-demo"
@@ -241,8 +229,7 @@ sidenote except its viewability-toggle is a symbol rather than a reference
 number. This document currently uses the symbol ⊕ (`&\#8853;`), but it's up to
 you.
 
-[^mn]:
-  {-} This is a margin note. Notice there isn't a number preceding the note.
+[^mn]: {-} This is a margin note. Notice there isn't a number preceding the note.
 
 Margin notes are created just like sidenotes, but with the `marginnote` class
 for the content and the `margin-toggle` class for the label and dummy checkbox.
@@ -260,7 +247,6 @@ paragraph:
 Figures in the margin are created as margin notes, as demonstrated in the next
 section.
 
-
 ## Figures
 
 Tufte emphasizes tight integration of graphics with text. Data, graphs, and
@@ -275,9 +261,8 @@ note goes in a regular margin note inside the figure. For example, most of the
 time one should introduce a figure directly into the main flow of discussion,
 like so:
 
-
 <figure>
-^[{-} From Edward Tufte, *Visual Display of Quantitative Information*, page 92.]
+[^{-} From Edward Tufte, *Visual Display of Quantitative Information*, page 92.]
 ![Exports and Imports to and from Denmark & Norway from 1700 to 1780](img/exports-imports.png)
 </figure>
 
@@ -287,17 +272,12 @@ those cases, a margin figure may be most appropriate. To place figures in the
 margin, just wrap an image (or whatever) in a margin note inside a
 <code>p</code> tag, as seen to the right of this paragraph.
 
-[^rhino]: {-}
-  ![Image of a Rhinoceros](https://placeimg.com/1000/600/tech) F.J. Cole, "The History of Albrecht
-  Dürer's Rhinoceros in Zooological Literature," *Science, Medicine, and
-  History: Essays on the Evolution of Scientific Thought and Medical Practice*
-  (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward
-  Tufte's *Visual Explanations*.
+[^rhino]: {-} ![Image of a Rhinoceros](https://placeimg.com/1000/600/tech) F.J. Cole, "The History of Albrecht Dürer's Rhinoceros in Zooological Literature," _Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice_ (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte's _Visual Explanations_.
 
 If you need a full-width figure, give it the `fullwidth` class. Make sure that's
 inside an `article`, and it will take up (almost) the full width of the screen.
 This approach is demonstrated below using Edward Tufte's English translation of
-the Napoleon's March data visualization. From *Beautiful Evidence*, page
+the Napoleon's March data visualization. From _Beautiful Evidence_, page
 122-124.
 
 <figure class="fullwidth">
@@ -305,19 +285,17 @@ the Napoleon's March data visualization. From *Beautiful Evidence*, page
 campaign, 1812-1813](https://placeimg.com/1000/600/tech)
 </figure>
 
-
 ## Code
 
 Technical jargon, programming language terms, and code samples are denoted with
-the `code` class, as I've been using in this document to denote
-HTML. Code needs to be monospace for formatting purposes and to aid in code
-analysis, but it must maintain its readability. To those ends, Tufte CSS
-follows GitHub's font selection, which shifts gracefully along the monospace
-spectrum from the elegant but rare Consolas all the way to good old reliable
-Courier.
+the `code` class, as I've been using in this document to denote HTML. Code needs
+to be monospace for formatting purposes and to aid in code analysis, but it must
+maintain its readability. To those ends, Tufte CSS follows GitHub's font
+selection, which shifts gracefully along the monospace spectrum from the elegant
+but rare Consolas all the way to good old reliable Courier.
 
-Extended code examples should use a `pre` tag with class
-`code`. This adds control over indentation and overflow as well:
+Extended code examples should use a `pre` tag with class `code`. This adds
+control over indentation and overflow as well:
 
 ```
 ;; Some code examples in Clojure. This is a comment.
@@ -339,22 +317,21 @@ Extended code examples should use a `pre` tag with class
 ;; http://howistart.org/posts/clojure/1
 ```
 
-
 ## ImageQuilts
 
-Tufte CSS provides support for Edward Tufte and Adam Schwartz's
-[ImageQuilts]. See the [ET forum announcement thread][quilts-thread] for more on
-quilts. Some have ragged edges, others straight. Include these images just as
-you would any other `figure`.
+Tufte CSS provides support for Edward Tufte and Adam Schwartz's [ImageQuilts].
+See the [ET forum announcement thread][quilts-thread] for more on quilts. Some
+have ragged edges, others straight. Include these images just as you would any
+other `figure`.
 
-[ImageQuilts]: http://imagequilts.com/
+[imagequilts]: http://imagequilts.com/
 [quilts-thread]: http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003wk
 
 This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width
 figure to accomodate its girth:
 
 <figure class="fullwidth">
-![Image of Chinese Calligraphy](https://placeimg.com/1000/600/tech)
+![Image of Chinese Calligraphy](https://edwardtufte.github.io/tufte-css/img/imagequilt-chinese-calligraphy.png)
 </figure>
 
 Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained
@@ -362,9 +339,8 @@ to the main text region. This quilt has ragged edges, but the image itself is of
 course still rectangular.
 
 <figure>
-![Image of animal sounds](img/imagequilt-animal-sounds.png)
+![Image of animal sounds](https://edwardtufte.github.io/tufte-css/img/imagequilt-animal-sounds.png)
 </figure>
-
 
 ## Epilogue
 
