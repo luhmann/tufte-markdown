@@ -1341,7 +1341,7 @@ mdast-squeeze-paragraphs@^3.0.2:
   dependencies:
     unist-util-remove "^1.0.0"
 
-mdast-util-definitions@^1.1.1, mdast-util-definitions@^1.2.0:
+mdast-util-definitions@^1.2.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-1.2.2.tgz#673f4377c3e23d3de7af7a4fe2214c0e221c5ac7"
   dependencies:
@@ -1683,14 +1683,6 @@ remark-html@^6.0.1:
     hast-util-to-html "^3.0.0"
     mdast-util-to-hast "^2.1.1"
     xtend "^4.0.1"
-
-remark-inline-links@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/remark-inline-links/-/remark-inline-links-3.0.4.tgz#91d858d776d1ed3ee31efd3ac0e422c7c19866d7"
-  dependencies:
-    mdast-util-definitions "^1.1.1"
-    unist-util-remove "^1.0.0"
-    unist-util-visit "^1.1.0"
 
 remark-math@^1.0.3:
   version "1.0.3"
