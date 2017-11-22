@@ -7,12 +7,12 @@ const math = require('remark-math')
 const katex = require('remark-html-katex')
 const slug = require('remark-slug')
 const textr = require('remark-textr')
-const sidenotes = require('./remark-sidenotes')
-const wrapInSection = require('./remark-wrap-in-section')
-const tufteFigureParser = require('./remark-tufte-figure-parser')
-const tufteFigureTransformer = require('./remark-tufte-figure-transformer')
-
 const textrBase = require('typographic-base')
+
+const sidenotes = require('../plugins/remark-sidenotes')
+const wrapInSection = require('../plugins/remark-wrap-in-section')
+const tufteFigureParser = require('../plugins/remark-tufte-figure-parser')
+const tufteFigureTransformer = require('../plugins/remark-tufte-figure-transformer')
 
 const configureParser = (options = {}) => {
   return unified()

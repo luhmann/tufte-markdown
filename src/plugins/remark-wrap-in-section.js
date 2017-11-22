@@ -18,13 +18,15 @@ function transformer(tree) {
       index === headingsMap.length ? tree.children.length : headingsMap[index]
     const children = tree.children.slice(sectionStartIndex, sectionEndIndex)
 
-    const wrapperNode = {
-      type: 'paragraph',
-      children,
-      data: { hName: 'section' },
-    }
+    if (children.length) {
+      const wrapperNode = {
+        type: 'paragraph',
+        children,
+        data: { hName: 'section' },
+      }
 
-    newTree.push(wrapperNode)
+      newTree.push(wrapperNode)
+    }
   }
 
   tree.children = newTree
