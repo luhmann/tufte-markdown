@@ -1,1 +1,1 @@
-export default from './wrap-in-section-transformer'
+export { default } from './wrap-in-section-transformer'
