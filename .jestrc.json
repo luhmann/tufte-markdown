@@ -1,0 +1,5 @@
+{
+  "testRegex": "\\.spec\\.js$",
+  "testPathIgnorePatterns": ["/node_modules/"],
+  "coveragePathIgnorePatterns": ["/node_modules/"]
+}
