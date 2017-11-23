@@ -1,6 +1,6 @@
 {
   "name": "@tufte-markdown/remark-wrap-in-section",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "A remark transformer wrapping document blocks that are started by a level-2 heading in a section to support html that relies on the stylesheets of Edward Tufte",
   "main": "dist/remark-wrap-in-section.js",
   "module": "dist/remark-wrap-in-section.es.js",
