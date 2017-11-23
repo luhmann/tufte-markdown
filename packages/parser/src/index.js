@@ -1,6 +1,5 @@
-const report = require('vfile-reporter')
-
-const configureParser = require('./parser')
+import report from 'vfile-reporter'
+import configureParser from './lib'
 
 const setup = (options = {}) => {
   const parser = configureParser(options)
@@ -16,4 +15,4 @@ const setup = (options = {}) => {
   }
 }
 
-module.exports = setup
+export default setup

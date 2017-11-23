@@ -1,12 +1,9 @@
-'use strict'
-const unified = require('unified')
-const parser = require('remark-parse')
+import unified from 'unified'
+import parser from 'remark-parse'
 
 const FIGURE_OPENING_TAG = '<figure'
 const OPENING_TAG = /<figure([^>]*)>/
 const CLOSING_TAG = '</figure>'
-
-module.exports = tufteFigureParser
 
 function tufteFigureParser() {
   var parser = this.Parser
@@ -80,3 +77,5 @@ function isRemarkParser(parser) {
       parser.prototype.inlineTokenizers.break.locator
   )
 }
+
+export default tufteFigureParser

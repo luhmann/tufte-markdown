@@ -1,8 +1,8 @@
-const shortid = require('shortid')
-const visit = require('unist-util-visit')
-const select = require('unist-util-select')
-const toHAST = require('mdast-util-to-hast')
-const toHTML = require('hast-util-to-html')
+import getSlug from 'speakingurl'
+import visit from 'unist-util-visit'
+import select from 'unist-util-select'
+import toHAST from 'mdast-util-to-hast'
+import toHTML from 'hast-util-to-html'
 
 const MARGINNOTE_SYMBOL = '{-}'
 
@@ -10,11 +10,11 @@ function sidenotes() {
   return transformer
 }
 
-const generateLabel = isMarginNote =>
-  `${isMarginNote ? 'md' : 'sd'}-${shortid.generate()}`
+const generateLabel = (isMarginNote, title) =>
+  `${isMarginNote ? 'md' : 'sd'}-${getSlug(title, { truncate: 20 })}`
 
 const getReplacement = ({ isMarginNote, noteHTML }) => {
-  const label = generateLabel(isMarginNote)
+  const label = generateLabel(isMarginNote, noteHTML)
   const labelCls = `margin-toggle ${isMarginNote ? '' : 'sidenote-number'}`
   const labelSymbol = isMarginNote ? '&#8853;' : ''
   const noteTypeCls = isMarginNote ? 'marginnote' : 'sidenote'
@@ -92,4 +92,4 @@ function transformer(tree) {
   })
 }
 
-module.exports = sidenotes
+export default sidenotes

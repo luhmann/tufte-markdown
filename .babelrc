@@ -1,0 +1,44 @@
+{
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "browsers": ["last 1 versions"]
+            }
+          }
+        ]
+      ]
+    },
+    "development": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "browsers": ["last 2 versions", "ie >= 11"]
+            },
+            "modules": false
+          }
+        ]
+      ],
+      "plugins": ["external-helpers"]
+    },
+    "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "browsers": ["last 2 versions", "ie >= 11"]
+            },
+            "modules": false
+          }
+        ]
+      ],
+      "plugins": ["external-helpers"]
+    }
+  }
+}

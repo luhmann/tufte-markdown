@@ -1,4 +1,4 @@
-const visit = require('unist-util-visit')
+import visit from 'unist-util-visit'
 
 function wrapInSection() {
   return transformer
@@ -32,4 +32,4 @@ function transformer(tree) {
   tree.children = newTree
 }
 
-module.exports = wrapInSection
+export default wrapInSection

@@ -1,7 +1,5 @@
-const visit = require('unist-util-visit')
-const HTML = require('html-parse-stringify')
-
-module.exports = tufteFigureTransformer
+import visit from 'unist-util-visit'
+import HTML from 'html-parse-stringify'
 
 function tufteFigureTransformer() {
   return transformer
@@ -32,3 +30,5 @@ function transformer(tree) {
     parent.children.splice(index, 1, replacement)
   })
 }
+
+export default tufteFigureTransformer

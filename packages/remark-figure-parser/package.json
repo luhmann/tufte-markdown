@@ -1,0 +1,45 @@
+{
+  "name": "@tufte-markdown/remark-figure-parser",
+  "version": "1.0.0",
+  "description":
+    "A remark parser that allows to tokenize tufte-style-figures with remark",
+  "main": "dist/remark-figure-parser.cjs.js",
+  "module": "dist/remark-figure-parser.es.js",
+  "scripts": {
+    "preversion": "npm run build",
+    "prebuild": "rimraf dist/**",
+    "build": "cross-env npm run build:es && npm run build:cjs",
+    "build:watch": "cross-env npm run build:es -- -w",
+    "build:es":
+      "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f es -i src/index.js -o dist/remark-figure-parser.es.js",
+    "build:cjs":
+      "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f cjs -i src/index.js -o dist/remark-figure-parser.cjs.js"
+  },
+  "keywords": [
+    "tufte",
+    "edward tufte",
+    "tufte-css",
+    "markdown",
+    "remark",
+    "unified"
+  ],
+  "author": "Jan Florian Dietrich <jfd@daenen4.de> (http://www.daenen4.de/)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luhmann/tufte-markdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luhmann/tufte-markdown/issues"
+  },
+  "files": ["README..md", "dist/**"],
+  "homepage": "https://github.com/luhmann/tufte-markdown#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "remark-parse": "^4.0.0",
+    "unified": "^6.1.6"
+  }
+}
