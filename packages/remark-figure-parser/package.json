@@ -1,6 +1,6 @@
 {
   "name": "@tufte-markdown/remark-figure-parser",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A remark parser that allows to tokenize tufte-style-figures with remark",
   "main": "dist/remark-figure-parser.cjs.js",
   "module": "dist/remark-figure-parser.es.js",
