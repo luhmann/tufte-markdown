@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/luhmann/tufte-markdown/issues"
   },
-  "files": ["README..md", "dist/**"],
+  "files": ["README.md", "dist/**"],
   "homepage": "https://github.com/luhmann/tufte-markdown#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
