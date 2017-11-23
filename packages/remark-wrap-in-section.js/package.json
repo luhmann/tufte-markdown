@@ -1,8 +1,7 @@
 {
   "name": "@tufte-markdown/remark-wrap-in-section",
-  "version": "1.0.0",
-  "description":
-    "A remark transformer wrapping document blocks that are started by a level-2 heading in a section to support html that relies on the stylesheets of Edward Tufte",
+  "version": "0.1.0",
+  "description": "A remark transformer wrapping document blocks that are started by a level-2 heading in a section to support html that relies on the stylesheets of Edward Tufte",
   "main": "dist/remark-wrap-in-section.js",
   "module": "dist/remark-wrap-in-section.es.js",
   "scripts": {
@@ -10,10 +9,8 @@
     "prebuild": "rimraf dist/**",
     "build": "cross-env npm run build:es && npm run build:cjs",
     "build:watch": "cross-env npm run build:es -- -w",
-    "build:es":
-      "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f es -i src/index.js -o dist/remark-wrap-in-section.es.js",
-    "build:cjs":
-      "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f cjs -i src/index.js -o dist/remark-wrap-in-section.cjs.js"
+    "build:es": "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f es -i src/index.js -o dist/remark-wrap-in-section.es.js",
+    "build:cjs": "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f cjs -i src/index.js -o dist/remark-wrap-in-section.cjs.js"
   },
   "keywords": [
     "tufte",
@@ -35,9 +32,11 @@
   "bugs": {
     "url": "https://github.com/luhmann/tufte-markdown/issues"
   },
-  "files": ["README..md", "dist/**"],
+  "files": [
+    "README..md",
+    "dist/**"
+  ],
   "homepage": "https://github.com/luhmann/tufte-markdown#readme",
-  "devDependencies": {},
   "dependencies": {
     "unist-util-visit": "^1.2.0"
   }
