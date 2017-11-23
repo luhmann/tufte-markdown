@@ -1,6 +1,6 @@
 {
   "name": "@tufte-markdown/remark-figure-transformer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A remark transformer outputting the correct html for Figures as used in the Stylesheets by Edward Tufte",
   "main": "dist/remark-figure-transformer.cjs.js",
   "module": "dist/remark-figure-transformer.es.js",
