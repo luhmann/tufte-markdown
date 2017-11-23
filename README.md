@@ -43,6 +43,11 @@ console.dir(result)
 **🖐 Note:** The parser currently only outputs document fragment to make it look
 right you will have to wrap it in an `article`-tag
 
+### Options
+
+`options.react` (Default: `false`) - Output a react-syntax-tree instead of HTML
+using [remark-react](https://github.com/mapbox/remark-react)
+
 ## Syntax
 
 You can get an overview of the possible syntax in the
