@@ -39,5 +39,8 @@
   "homepage": "https://github.com/luhmann/tufte-markdown#readme",
   "dependencies": {
     "unist-util-visit": "^1.2.0"
+  },
+  "devDependencies": {
+    "unist-builder": "^1.0.2"
   }
 }

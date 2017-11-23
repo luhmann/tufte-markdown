@@ -56,6 +56,8 @@ You can get an overview of the possible syntax in the
 ## Limitations/Differences to `tufte-pandoc-css`
 
 * Currently cannot parse markdown in the `footer` of a blockquote
+* Does not wrap put headings below `h2` in their own sections, which is closer
+  to the original `tufte-css`
 * `tufte-pandoc-css` uses `^[{-} Text]` for inline-sidenotes which would need
   custom parsing in remark. This project uses `[^{-} Text]` which seems to be
   more inline with how the other side-/marginnotes are defined

@@ -1,0 +1,551 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with mixed nested headings should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "depth": 3,
+          "type": "heading",
+          "value": "Heading 3",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "depth": 4,
+          "type": "heading",
+          "value": "Heading 4",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "depth": 5,
+          "type": "heading",
+          "value": "Heading 5",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`with multiple-level-2-headings and no preceding block should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`with multiple-level-2-headings and preceding blocks should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`with single level-2-heading and no preceding block should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`with single level-2-heading and preceding blocks should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "depth": 2,
+          "type": "heading",
+          "value": "Heading 2",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "type": "text",
+              "value": "Some text",
+            },
+          ],
+          "type": "paragraph",
+        },
+      ],
+      "data": Object {
+        "hName": "section",
+        "hProperties": Object {
+          "className": "level2",
+        },
+      },
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
