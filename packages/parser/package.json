@@ -1,6 +1,6 @@
 {
   "name": "@tufte-markdown/parser",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A markdown parser that output html that is compatible with tufte-css",
   "main": "dist/parser.cjs.js",
   "module": "dist/parser.es.js",
