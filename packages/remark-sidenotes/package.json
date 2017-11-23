@@ -1,6 +1,6 @@
 {
   "name": "@tufte-markdown/remark-sidenotes",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A remark transformer supporting Sidenotes as used in the Stylesheets by Edward Tufte",
   "main": "dist/remark-sidenotes.cjs.js",
   "module": "dist/remark-sidenotes.es.js",

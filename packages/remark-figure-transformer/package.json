@@ -1,8 +1,7 @@
 {
   "name": "@tufte-markdown/remark-figure-transformer",
-  "version": "1.0.0",
-  "description":
-    "A remark transformer outputting the correct html for Figures as used in the Stylesheets by Edward Tufte",
+  "version": "0.1.0",
+  "description": "A remark transformer outputting the correct html for Figures as used in the Stylesheets by Edward Tufte",
   "main": "dist/remark-figure-transformer.cjs.js",
   "module": "dist/remark-figure-transformer.es.js",
   "scripts": {
@@ -10,10 +9,8 @@
     "prebuild": "rimraf dist/**",
     "build": "cross-env npm run build:es && npm run build:cjs",
     "build:watch": "cross-env npm run build:es -- -w",
-    "build:es":
-      "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f es -i src/index.js -o dist/remark-figure-transformer.es.js",
-    "build:cjs":
-      "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f cjs -i src/index.js -o dist/remark-figure-transformer.cjs.js"
+    "build:es": "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f es -i src/index.js -o dist/remark-figure-transformer.es.js",
+    "build:cjs": "cross-env NODE_ENV=development rollup -c ../../rollup.config.js -f cjs -i src/index.js -o dist/remark-figure-transformer.cjs.js"
   },
   "keywords": [
     "tufte",
@@ -35,11 +32,13 @@
   "bugs": {
     "url": "https://github.com/luhmann/tufte-markdown/issues"
   },
-  "files": ["README..md", "dist/**"],
+  "files": [
+    "README..md",
+    "dist/**"
+  ],
   "homepage": "https://github.com/luhmann/tufte-markdown#readme",
-  "devDependencies": {},
   "dependencies": {
-    "unist-util-visit": "^1.2.0",
-    "html-parse-stringify": "^1.0.2"
+    "html-parse-stringify": "^1.0.2",
+    "unist-util-visit": "^1.2.0"
   }
 }
