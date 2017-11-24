@@ -62,3 +62,6 @@ output.html
 
 # Built files
 dist
+
+# debug file
+debug.js
