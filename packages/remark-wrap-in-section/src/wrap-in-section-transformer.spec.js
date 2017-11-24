@@ -63,14 +63,6 @@ describe('with single level-2-heading', () => {
     it('should render the wrapped paragraph as section', () => {
       expect(transformer(subject).children[0].data.hName).toEqual('section')
     })
-
-    it('should apply the correct class to the wrapped paragraph', () => {
-      expect(transformer(subject).children[0].data.hProperties).toEqual(
-        expect.objectContaining({
-          className: 'level2',
-        })
-      )
-    })
   })
 
   describe('and preceding blocks', () => {
@@ -100,24 +92,8 @@ describe('with single level-2-heading', () => {
       expect(transformer(subject).children[0].data.hName).toEqual('section')
     })
 
-    it('should apply the correct class to the first wrapped paragraph', () => {
-      expect(transformer(subject).children[0].data.hProperties).toEqual(
-        expect.objectContaining({
-          className: 'level2',
-        })
-      )
-    })
-
     it('should render the second wrapped paragraph as section', () => {
       expect(transformer(subject).children[1].data.hName).toEqual('section')
-    })
-
-    it('should apply the correct class to the second wrapped paragraph', () => {
-      expect(transformer(subject).children[1].data.hProperties).toEqual(
-        expect.objectContaining({
-          className: 'level2',
-        })
-      )
     })
   })
 })

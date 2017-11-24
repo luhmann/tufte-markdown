@@ -23,7 +23,7 @@ export function transformer(tree) {
         const wrapperNode = {
           type: 'paragraph',
           children,
-          data: { hName: 'section', hProperties: { className: 'level2' } },
+          data: { hName: 'section' },
         }
 
         newTree.push(wrapperNode)
