@@ -10,11 +10,11 @@ function sidenotes() {
   return transformer
 }
 
-const generateLabel = (isMarginNote, title) =>
+const generateInputId = (isMarginNote, title) =>
   `${isMarginNote ? 'md' : 'sd'}-${getSlug(title, { truncate: 20 })}`
 
 const getReplacement = ({ isMarginNote, noteHTML }) => {
-  const label = generateLabel(isMarginNote, noteHTML)
+  const inputId = generateInputId(isMarginNote, noteHTML)
   const labelCls = `margin-toggle ${isMarginNote ? '' : 'sidenote-number'}`
   const labelSymbol = isMarginNote ? '&#8853;' : ''
   const noteTypeCls = isMarginNote ? 'marginnote' : 'sidenote'
@@ -22,11 +22,13 @@ const getReplacement = ({ isMarginNote, noteHTML }) => {
   return [
     {
       type: 'html',
-      value: `<label for="${label}" class="${labelCls}">${labelSymbol}</label>`,
+      value: `<label for="${inputId}" class="${labelCls}">${
+        labelSymbol
+      }</label>`,
     },
     {
       type: 'html',
-      value: `<input type="checkbox" id="${label}" class="margin-toggle" />`,
+      value: `<input type="checkbox" id="${inputId}" class="margin-toggle" />`,
     },
     {
       type: 'html',
@@ -55,7 +57,7 @@ const extractNoteFromHtml = note => {
   }
 }
 
-function transformer(tree) {
+export function transformer(tree) {
   // "Regular" Sidenotes/Marginnotes consisting of a reference and a definition
   // Syntax for Sidenotes [^<number>] and somewhere else [^<number]: <markdown>
   // Syntax for Marginnotes [^<descriptor>] and somewhere else [^<descriptor]: {-}
@@ -65,7 +67,7 @@ function transformer(tree) {
       `footnoteDefinition[identifier=${node.identifier}]`
     )
 
-    if (!target) throw new Error('No coresponding note found')
+    if (!target.length) throw new Error('No coresponding note found')
 
     const notesAst =
       target[0].children.length && target[0].children[0].type === 'paragraph'
@@ -84,12 +86,14 @@ function transformer(tree) {
   // "Inline" Sidenotes which do not have two parts
   // Syntax: [^{-} <markdown>]
   visit(tree, 'footnote', (node, index, parent) => {
-    console.log()
     const notesAst = node.children
     const nodeDetail = extractNoteFromHtml(coerceToHtml(notesAst))
 
     parent.children.splice(index, 1, ...getReplacement(nodeDetail))
   })
+
+  // Only for testing
+  return tree
 }
 
 export default sidenotes

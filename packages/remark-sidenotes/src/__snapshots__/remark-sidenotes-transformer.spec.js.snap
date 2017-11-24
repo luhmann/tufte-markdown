@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inline-Marginnotes should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "type": "html",
+              "value": "<label for=\\"md-this-is-the-footnote\\" class=\\"margin-toggle \\">&#8853;</label>",
+            },
+            Object {
+              "type": "html",
+              "value": "<input type=\\"checkbox\\" id=\\"md-this-is-the-footnote\\" class=\\"margin-toggle\\" />",
+            },
+            Object {
+              "type": "html",
+              "value": "<span class=\\"marginnote\\">",
+            },
+            Object {
+              "type": "html",
+              "value": "This is the footnote for identifier ^blue<em>This is strong</em><a href=\\"http://example.org\\" title=\\"Just an example\\"></a>",
+            },
+            Object {
+              "type": "html",
+              "value": "</span>",
+            },
+            Object {
+              "alt": "alpha",
+              "title": "bravo",
+              "type": "image",
+              "url": "http://example.com",
+            },
+          ],
+          "type": "tufteFigure",
+        },
+      ],
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`Marginnotes with margin-note-indicator as own node should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "text",
+          "value": "Lorem ipsum dolor sed amet",
+        },
+        Object {
+          "type": "html",
+          "value": "<label for=\\"md-this-is-the-footnote\\" class=\\"margin-toggle \\">&#8853;</label>",
+        },
+        Object {
+          "type": "html",
+          "value": "<input type=\\"checkbox\\" id=\\"md-this-is-the-footnote\\" class=\\"margin-toggle\\" />",
+        },
+        Object {
+          "type": "html",
+          "value": "<span class=\\"marginnote\\">",
+        },
+        Object {
+          "type": "html",
+          "value": "This is the footnote for identifier ^red<em>This is strong</em><a href=\\"http://example.org\\" title=\\"Just an example\\"></a>",
+        },
+        Object {
+          "type": "html",
+          "value": "</span>",
+        },
+        Object {
+          "type": "text",
+          "value": "dolores adam turing and the gang",
+        },
+        Object {
+          "type": "emphasis",
+          "value": "rocked",
+        },
+        Object {
+          "type": "text",
+          "value": "their life",
+        },
+      ],
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [],
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`Marginnotes with margin-note-indicator inline in text should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "text",
+          "value": "Lorem ipsum dolor sed amet",
+        },
+        Object {
+          "type": "html",
+          "value": "<label for=\\"md-this-is-the-footnote\\" class=\\"margin-toggle \\">&#8853;</label>",
+        },
+        Object {
+          "type": "html",
+          "value": "<input type=\\"checkbox\\" id=\\"md-this-is-the-footnote\\" class=\\"margin-toggle\\" />",
+        },
+        Object {
+          "type": "html",
+          "value": "<span class=\\"marginnote\\">",
+        },
+        Object {
+          "type": "html",
+          "value": "This is the footnote for identifier ^blue<em>This is strong</em><a href=\\"http://example.org\\" title=\\"Just an example\\"></a>",
+        },
+        Object {
+          "type": "html",
+          "value": "</span>",
+        },
+        Object {
+          "type": "text",
+          "value": "dolores adam turing and the gang",
+        },
+        Object {
+          "type": "emphasis",
+          "value": "rocked",
+        },
+        Object {
+          "type": "text",
+          "value": "their life",
+        },
+      ],
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [],
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`Marginnotes with no matching \`noteDefinition\` should throw an error 1`] = `"No coresponding note found"`;
+
+exports[`Sidenotes with no matching \`noteDefinition\` should throw an error 1`] = `"No coresponding note found"`;
+
+exports[`Sidenotes with target as paragraph should match the snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "text",
+          "value": "Lorem ipsum dolor sed amet",
+        },
+        Object {
+          "type": "html",
+          "value": "<label for=\\"sd-this-is-the-footnote\\" class=\\"margin-toggle sidenote-number\\"></label>",
+        },
+        Object {
+          "type": "html",
+          "value": "<input type=\\"checkbox\\" id=\\"sd-this-is-the-footnote\\" class=\\"margin-toggle\\" />",
+        },
+        Object {
+          "type": "html",
+          "value": "<span class=\\"sidenote\\">",
+        },
+        Object {
+          "type": "html",
+          "value": "This is the footnote for identifier ^1<em>This is strong</em><a href=\\"http://example.org\\" title=\\"Just an example\\"></a>",
+        },
+        Object {
+          "type": "html",
+          "value": "</span>",
+        },
+        Object {
+          "type": "text",
+          "value": "dolores adam turing and the gang",
+        },
+        Object {
+          "type": "emphasis",
+          "value": "rocked",
+        },
+        Object {
+          "type": "text",
+          "value": "their life",
+        },
+      ],
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [],
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`Sidenotes with target not as its own paragraph should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "text",
+          "value": "Lorem ipsum dolor sed amet",
+        },
+        Object {
+          "type": "html",
+          "value": "<label for=\\"sd-this-is-the-footnote\\" class=\\"margin-toggle sidenote-number\\"></label>",
+        },
+        Object {
+          "type": "html",
+          "value": "<input type=\\"checkbox\\" id=\\"sd-this-is-the-footnote\\" class=\\"margin-toggle\\" />",
+        },
+        Object {
+          "type": "html",
+          "value": "<span class=\\"sidenote\\">",
+        },
+        Object {
+          "type": "html",
+          "value": "This is the footnote for identifier ^1<em>This is strong</em><a href=\\"http://example.org\\" title=\\"Just an example\\"></a>",
+        },
+        Object {
+          "type": "html",
+          "value": "</span>",
+        },
+        Object {
+          "type": "text",
+          "value": "dolores adam turing and the gang",
+        },
+        Object {
+          "type": "emphasis",
+          "value": "rocked",
+        },
+        Object {
+          "type": "text",
+          "value": "their life",
+        },
+      ],
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [],
+      "type": "paragraph",
+    },
+  ],
+  "type": "root",
+}
+`;

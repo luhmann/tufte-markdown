@@ -4,8 +4,7 @@ to jump their eye to the bottom of the page, but instead display off to the side
 in the margin. Perhaps you have noticed their use in this document already. You
 are very astute.
 
-[^3]:
-  This is a sidenote.
+[^3]: This is a sidenote.
 
 <!-- break -->
 
@@ -18,9 +17,7 @@ sidenote except its viewability-toggle is a symbol rather than a reference
 number. This document currently uses the symbol ⊕ (`&\#8853;`), but it's up to
 you.
 
-[^mn]:
-  {-} This is a margin note. Notice there isn't a number preceding the note. What happens if me make it span ac coulple
-  of paragraphs? or add a link [Example](http://example.org)
+[^mn]: {-} This is a margin note. Notice there isn't a number preceding the note. What happens if me make it span ac coulple of paragraphs? or add a link [Example](http://example.org)
 
 <!-- break -->
 
@@ -43,19 +40,14 @@ those cases, a margin figure may be most appropriate. To place figures in the
 margin, just wrap an image (or whatever) in a margin note inside a
 <code>p</code> tag, as seen to the right of this paragraph.
 
-[^rhino]: {-}
-  ![Image of a Rhinoceros](https://placeimg.com/1000/600/tech) F.J. Cole, "The History of Albrecht
-  Dürer's Rhinoceros in Zooological Literature," *Science, Medicine, and
-  History: Essays on the Evolution of Scientific Thought and Medical Practice*
-  (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward
-  Tufte's *Visual Explanations*.
+[^rhino]: {-} ![Image of a Rhinoceros](https://placeimg.com/1000/600/tech) F.J. Cole, "The History of Albrecht Dürer's Rhinoceros in Zooological Literature," _Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice_ (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte's _Visual Explanations_.
 
 <!-- break -->
 
 If you need a full-width figure, give it the `fullwidth` class. Make sure that's
 inside an `article`, and it will take up (almost) the full width of the screen.
 This approach is demonstrated below using Edward Tufte's English translation of
-the Napoleon's March data visualization. From *Beautiful Evidence*, page
+the Napoleon's March data visualization. From _Beautiful Evidence_, page
 122-124.
 
 <figure class="fullwidth">
@@ -65,5 +57,7 @@ campaign, 1812-1813](https://placeimg.com/1000/600/tech)
 
 <!-- break -->
 
-^[{-} From Edward Tufte, *Visual Display of Quantitative Information*, page 92.]
+<figure>
+[^{-} From Edward Tufte, *Visual Display of Quantitative Information*, page 92.]
 ![Exports and Imports to and from Denmark & Norway from 1700 to 1780](img/exports-imports.png)
+</figure>
