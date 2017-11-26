@@ -1,0 +1,644 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`figure\`-tag with additional classes should match snapshot 1`] = `
+Object {
+  "attributes": Object {
+    "closingHtml": "</figure>",
+    "openingHtml": "<figure class=\\"fullwidth foo\\">",
+  },
+  "children": Array [
+    Object {
+      "alt": "Figurative map of the successive losses of the French Army in the Russian
+campaign, 1812-1813",
+      "position": Position {
+        "end": Object {
+          "column": 86,
+          "line": 3,
+          "offset": 162,
+        },
+        "indent": Array [
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 1,
+        },
+      },
+      "title": null,
+      "type": "image",
+      "url": "https://edwardtufte.github.io/tufte-css/img/napoleons-march.png",
+    },
+  ],
+  "position": Position {
+    "end": Object {
+      "column": 10,
+      "line": 4,
+      "offset": 202,
+    },
+    "indent": Array [
+      1,
+      1,
+      1,
+    ],
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "tufteFigure",
+}
+`;
+
+exports[`simple \`figure\`-tag with markdown-content should match snapshot 1`] = `
+Object {
+  "attributes": Object {
+    "closingHtml": "</figure>",
+    "openingHtml": "<figure>",
+  },
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "position": Position {
+            "end": Object {
+              "column": 104,
+              "line": 2,
+              "offset": 104,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 81,
+              "line": 2,
+              "offset": 81,
+            },
+          },
+          "type": "text",
+          "value": "{-} From Edward Tufte, ",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "position": Position {
+                "end": Object {
+                  "column": 147,
+                  "line": 2,
+                  "offset": 147,
+                },
+                "indent": Array [],
+                "start": Object {
+                  "column": 105,
+                  "line": 2,
+                  "offset": 105,
+                },
+              },
+              "type": "text",
+              "value": "Visual Display of Quantitative Information",
+            },
+          ],
+          "position": Position {
+            "end": Object {
+              "column": 148,
+              "line": 2,
+              "offset": 148,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 104,
+              "line": 2,
+              "offset": 104,
+            },
+          },
+          "type": "emphasis",
+        },
+        Object {
+          "position": Position {
+            "end": Object {
+              "column": 158,
+              "line": 2,
+              "offset": 158,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 148,
+              "line": 2,
+              "offset": 148,
+            },
+          },
+          "type": "text",
+          "value": ", page 92.",
+        },
+      ],
+      "position": Position {
+        "end": Object {
+          "column": 81,
+          "line": 2,
+          "offset": 81,
+        },
+        "indent": Array [],
+        "start": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 1,
+        },
+      },
+      "type": "footnote",
+    },
+    Object {
+      "position": Position {
+        "end": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 82,
+        },
+        "indent": Array [
+          1,
+        ],
+        "start": Object {
+          "column": 81,
+          "line": 2,
+          "offset": 81,
+        },
+      },
+      "type": "text",
+      "value": "
+",
+    },
+    Object {
+      "alt": "Exports and Imports to and from Denmark & Norway from 1700 to 1780",
+      "position": Position {
+        "end": Object {
+          "column": 135,
+          "line": 3,
+          "offset": 216,
+        },
+        "indent": Array [],
+        "start": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 82,
+        },
+      },
+      "title": null,
+      "type": "image",
+      "url": "https://edwardtufte.github.io/tufte-css/img/exports-imports.png",
+    },
+  ],
+  "position": Position {
+    "end": Object {
+      "column": 10,
+      "line": 4,
+      "offset": 234,
+    },
+    "indent": Array [
+      1,
+      1,
+      1,
+    ],
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "tufteFigure",
+}
+`;
+
+exports[`simple \`figure\`-tag with text content should match snapshot 1`] = `
+Object {
+  "attributes": Object {
+    "closingHtml": "</figure>",
+    "openingHtml": "<figure>",
+  },
+  "children": Array [
+    Object {
+      "position": Position {
+        "end": Object {
+          "column": 59,
+          "line": 3,
+          "offset": 120,
+        },
+        "indent": Array [
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 2,
+          "offset": 1,
+        },
+      },
+      "type": "text",
+      "value": "This is just text in a figure which does not make much sense
+if you consider what a figure should be, but be accepting.",
+    },
+  ],
+  "position": Position {
+    "end": Object {
+      "column": 10,
+      "line": 4,
+      "offset": 138,
+    },
+    "indent": Array [
+      1,
+      1,
+      1,
+    ],
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "tufteFigure",
+}
+`;
+
+exports[`with surrounding markdown should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "position": Position {
+            "end": Object {
+              "column": 11,
+              "line": 1,
+              "offset": 10,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 4,
+              "line": 1,
+              "offset": 3,
+            },
+          },
+          "type": "text",
+          "value": "Figures",
+        },
+      ],
+      "depth": 2,
+      "position": Position {
+        "end": Object {
+          "column": 11,
+          "line": 1,
+          "offset": 10,
+        },
+        "indent": Array [],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "heading",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Position {
+            "end": Object {
+              "column": 11,
+              "line": 7,
+              "offset": 329,
+            },
+            "indent": Array [
+              1,
+              1,
+              1,
+              1,
+            ],
+            "start": Object {
+              "column": 1,
+              "line": 3,
+              "offset": 12,
+            },
+          },
+          "type": "text",
+          "value": "Tufte emphasizes tight integration of graphics with text. Data, graphs, and
+figures are kept with the text that discusses them. In print, this means they
+are not relegated to a separate page. On the web, that means readability of
+graphics and their accompanying text without extra clicks, tab-switching, or
+scrolling.",
+        },
+      ],
+      "position": Position {
+        "end": Object {
+          "column": 11,
+          "line": 7,
+          "offset": 329,
+        },
+        "indent": Array [
+          1,
+          1,
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 3,
+          "offset": 12,
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "position": Position {
+            "end": Object {
+              "column": 31,
+              "line": 9,
+              "offset": 361,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 1,
+              "line": 9,
+              "offset": 331,
+            },
+          },
+          "type": "text",
+          "value": "Figures should try to use the ",
+        },
+        Object {
+          "position": Position {
+            "end": Object {
+              "column": 39,
+              "line": 9,
+              "offset": 369,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 31,
+              "line": 9,
+              "offset": 361,
+            },
+          },
+          "type": "inlineCode",
+          "value": "figure",
+        },
+        Object {
+          "position": Position {
+            "end": Object {
+              "column": 9,
+              "line": 13,
+              "offset": 656,
+            },
+            "indent": Array [
+              1,
+              1,
+              1,
+              1,
+            ],
+            "start": Object {
+              "column": 39,
+              "line": 9,
+              "offset": 369,
+            },
+          },
+          "type": "text",
+          "value": " element, which by default are constrained
+to the main column. Don't wrap figures in a paragraph tag. Any label or margin
+note goes in a regular margin note inside the figure. For example, most of the
+time one should introduce a figure directly into the main flow of discussion,
+like so:",
+        },
+      ],
+      "position": Position {
+        "end": Object {
+          "column": 9,
+          "line": 13,
+          "offset": 656,
+        },
+        "indent": Array [
+          1,
+          1,
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 9,
+          "offset": 331,
+        },
+      },
+      "type": "paragraph",
+    },
+    Object {
+      "attributes": Object {
+        "closingHtml": "</figure>",
+        "openingHtml": "<figure>",
+      },
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "position": Position {
+                "end": Object {
+                  "column": 104,
+                  "line": 2,
+                  "offset": 104,
+                },
+                "indent": Array [],
+                "start": Object {
+                  "column": 81,
+                  "line": 2,
+                  "offset": 81,
+                },
+              },
+              "type": "text",
+              "value": "{-} From Edward Tufte, ",
+            },
+            Object {
+              "children": Array [
+                Object {
+                  "position": Position {
+                    "end": Object {
+                      "column": 147,
+                      "line": 2,
+                      "offset": 147,
+                    },
+                    "indent": Array [],
+                    "start": Object {
+                      "column": 105,
+                      "line": 2,
+                      "offset": 105,
+                    },
+                  },
+                  "type": "text",
+                  "value": "Visual Display of Quantitative Information",
+                },
+              ],
+              "position": Position {
+                "end": Object {
+                  "column": 148,
+                  "line": 2,
+                  "offset": 148,
+                },
+                "indent": Array [],
+                "start": Object {
+                  "column": 104,
+                  "line": 2,
+                  "offset": 104,
+                },
+              },
+              "type": "emphasis",
+            },
+            Object {
+              "position": Position {
+                "end": Object {
+                  "column": 158,
+                  "line": 2,
+                  "offset": 158,
+                },
+                "indent": Array [],
+                "start": Object {
+                  "column": 148,
+                  "line": 2,
+                  "offset": 148,
+                },
+              },
+              "type": "text",
+              "value": ", page 92.",
+            },
+          ],
+          "position": Position {
+            "end": Object {
+              "column": 81,
+              "line": 2,
+              "offset": 81,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 1,
+              "line": 2,
+              "offset": 1,
+            },
+          },
+          "type": "footnote",
+        },
+        Object {
+          "position": Position {
+            "end": Object {
+              "column": 1,
+              "line": 3,
+              "offset": 82,
+            },
+            "indent": Array [
+              1,
+            ],
+            "start": Object {
+              "column": 81,
+              "line": 2,
+              "offset": 81,
+            },
+          },
+          "type": "text",
+          "value": "
+",
+        },
+        Object {
+          "alt": "Exports and Imports to and from Denmark & Norway from 1700 to 1780",
+          "position": Position {
+            "end": Object {
+              "column": 135,
+              "line": 3,
+              "offset": 216,
+            },
+            "indent": Array [],
+            "start": Object {
+              "column": 1,
+              "line": 3,
+              "offset": 82,
+            },
+          },
+          "title": null,
+          "type": "image",
+          "url": "https://edwardtufte.github.io/tufte-css/img/exports-imports.png",
+        },
+      ],
+      "position": Position {
+        "end": Object {
+          "column": 10,
+          "line": 18,
+          "offset": 892,
+        },
+        "indent": Array [
+          1,
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 15,
+          "offset": 658,
+        },
+      },
+      "type": "tufteFigure",
+    },
+    Object {
+      "attributes": Object {
+        "closingHtml": "</figure>",
+        "openingHtml": "<figure class=\\"fullwidth\\">",
+      },
+      "children": Array [
+        Object {
+          "alt": "Figurative map of the successive losses of the French Army in the Russian
+campaign, 1812-1813",
+          "position": Position {
+            "end": Object {
+              "column": 86,
+              "line": 3,
+              "offset": 162,
+            },
+            "indent": Array [
+              1,
+            ],
+            "start": Object {
+              "column": 1,
+              "line": 2,
+              "offset": 1,
+            },
+          },
+          "title": null,
+          "type": "image",
+          "url": "https://edwardtufte.github.io/tufte-css/img/napoleons-march.png",
+        },
+      ],
+      "position": Position {
+        "end": Object {
+          "column": 10,
+          "line": 23,
+          "offset": 1092,
+        },
+        "indent": Array [
+          1,
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 20,
+          "offset": 894,
+        },
+      },
+      "type": "tufteFigure",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 1,
+      "line": 24,
+      "offset": 1093,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;

@@ -64,8 +64,11 @@ function parseMarkdown(markdown) {
     .use(parser, { commonmark: true, footnotes: true })
     .parse(markdown)
 
-  // TODO: error-cases make this more sturdy
-  return result.type === 'root' ? result.children[0].children : result
+  if (result.type === 'root' && result.children[0].type === 'paragraph') {
+    return result.children[0].children
+  }
+
+  return result
 }
 
 function isRemarkParser(parser) {
