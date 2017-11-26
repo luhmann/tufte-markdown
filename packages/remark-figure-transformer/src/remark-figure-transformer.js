@@ -5,7 +5,7 @@ function tufteFigureTransformer() {
   return transformer
 }
 
-function transformer(tree) {
+export function transformer(tree) {
   visit(tree, 'tufteFigure', (node, index, parent) => {
     const openTagAst = HTML.parse(node.attributes.openingHtml)
 
@@ -29,6 +29,9 @@ function transformer(tree) {
     }
     parent.children.splice(index, 1, replacement)
   })
+
+  // only for test
+  return tree
 }
 
 export default tufteFigureTransformer

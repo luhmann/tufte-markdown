@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with additional classes should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "type": "text",
+      "value": "This is a text content within a parsed tufte figure",
+    },
+    Object {
+      "type": "image",
+      "url": "http://example.org/foo.png",
+    },
+  ],
+  "data": Object {
+    "hName": "figure",
+    "hProperties": Object {
+      "className": "fullwidth",
+    },
+  },
+  "type": "paragraph",
+}
+`;
+
+exports[`with markdown-content should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "type": "text",
+      "value": "This is a text content within a parsed tufte figure",
+    },
+    Object {
+      "type": "image",
+      "url": "http://example.org/foo.png",
+    },
+  ],
+  "data": Object {
+    "hName": "figure",
+    "hProperties": undefined,
+  },
+  "type": "paragraph",
+}
+`;
+
+exports[`with text-content should match snapshot 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "type": "text",
+      "value": "This is a text content within a parsed tufte figure",
+    },
+  ],
+  "data": Object {
+    "hName": "figure",
+    "hProperties": undefined,
+  },
+  "type": "paragraph",
+}
+`;
