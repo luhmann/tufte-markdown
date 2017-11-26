@@ -327,7 +327,7 @@ exports[`with target React should convert "code.md" correctly 1`] = `
 
     </code>
   </pre>
-  
+
 
   <pre>
     <code>
@@ -353,7 +353,7 @@ graphics and their accompanying text without extra clicks, tab-switching, or
 scrolling.
   </p>
   <p>
-    Figures should try to use the 
+    Figures should try to use the
     <code>
       figure
     </code>
@@ -363,7 +363,7 @@ note goes in a regular margin note inside the figure. For example, most of the
 time one should introduce a figure directly into the main flow of discussion,
 like so:
   </p>
-  
+
 
   <img
     alt="Exports and Imports to and from Denmark & Norway from 1700 to 1780"
@@ -386,7 +386,7 @@ extensive use of sidenotes, tight integration of graphics with text, and
 carefully chosen typography.
   </p>
   <p>
-    Tufte CSS was created by 
+    Tufte CSS was created by
     <a
       href="http://www.daveliepmann.com"
     >
@@ -405,7 +405,7 @@ The original idea was cribbed from
       e
       X
     </a>
-     and 
+     and
     <a
       href="http://rmarkdown.rstudio.com/tufte_handout_format.html"
     >
@@ -417,14 +417,14 @@ contributed to those projects.
   </p>
   <p>
     If you see anything that Tufte CSS could improve, we welcome your contribution
-in the form of an issue or pull request on the GitHub project: 
+in the form of an issue or pull request on the GitHub project:
     <a
       href="https://github.com/edwardtufte/tufte-css"
     >
       tufte-css
     </a>
     .
-Please note the 
+Please note the
     <a
       href="https://github.com/edwardtufte/tufte-css#contributing"
     >
@@ -442,7 +442,7 @@ a sketch of one way to implement this particular set of ideas. It should be a
 starting point, not a design goal, because any project should present their
 information as best suits their particular circumstances.
   </p>
-  
+
 
   <h2
     id="user-content-getting-started"
@@ -450,20 +450,20 @@ information as best suits their particular circumstances.
     Getting Started
   </h2>
   <p>
-    To use Tufte CSS, copy 
+    To use Tufte CSS, copy
     <code>
       tufte.css
     </code>
-     and the 
+     and the
     <code>
       et-book
     </code>
      directory of font files to
-your project directory, then add the following to your HTML document’s 
+your project directory, then add the following to your HTML document’s
     <code>
       head
     </code>
-    
+
 block:
   </p>
   <pre>
@@ -477,7 +477,7 @@ block:
 described in this document. For best results, View Source and Inspect Element
 frequently.
   </p>
-  
+
 
   <h2
     id="user-content-fundamentals"
@@ -490,40 +490,40 @@ frequently.
     Sections and Headings
   </h3>
   <p>
-    Organize your document with an 
+    Organize your document with an
     <code>
       article
     </code>
-     element inside your 
+     element inside your
     <code>
       body
     </code>
      tag. Inside
-that, use 
+that, use
     <code>
       section
     </code>
      tags around each logical grouping of text and headings.
   </p>
   <p>
-    Tufte CSS uses 
+    Tufte CSS uses
     <code>
       h1
     </code>
-     for the document title, 
+     for the document title,
     <code>
       p
     </code>
-     with class 
+     with class
     <code>
       subtitle
     </code>
      for the
-document subtitle, 
+document subtitle,
     <code>
       h2
     </code>
-     for section headings, and 
+     for section headings, and
     <code>
       h3
     </code>
@@ -532,7 +532,7 @@ More specific headings are not supported. If you feel the urge to reach for a
 heading of level 4 or greater, consider redesigning your document:
   </p>
   <blockquote>
-    
+
 
     <p>
       [
@@ -543,28 +543,28 @@ physics in 1800 pages, using only 2 levels of hierarchical headings: chapters
 and A-level heads in the text. It also uses the methodology of
 
       sentences
-       which then cumulate sequentially into 
+       which then cumulate sequentially into
       paragraphs
       ,
 rather than the grunts of bullet points. Undergraduate Caltech physics is very
 complicated material, but it didn’t require an elaborate hierarchy to
 organize.
     </p>
-    
+
 
   </blockquote>
   <p>
     As a bonus, this excerpt regarding the use of headings provides an example of
 block quotes. In Tufte CSS they are just lightly styled, semantically correct
-HTML using 
+HTML using
     <code>
       blockquote
     </code>
-     and 
+     and
     <code>
       footer
     </code>
-     elements. See page 20 of 
+     elements. See page 20 of
     <a
       href="https://www.edwardtufte.com/tufte/books_vdqi"
     >
@@ -578,18 +578,18 @@ Display of Quantitative Information
     , Tufte starts each
 section with a bit of vertical space, a non-indented paragraph, and the first
 few words of the sentence set in small caps. For this we use a span with the
-class 
+class
     <code>
       newthought
     </code>
     , as demonstrated at the beginning of this paragraph. Vertical
-spacing is accomplished separately through 
+spacing is accomplished separately through
     <code>
       &lt;section&gt;
     </code>
      tags. Be consistent:
 though we do so in this paragraph for the purpose of demonstration, do not
-alternate use of header elements and the 
+alternate use of header elements and the
     <code>
       newthought
     </code>
@@ -614,7 +614,7 @@ to jump their eye to the bottom of the page, but instead display off to the side
 in the margin. Perhaps you have noticed their use in this document already. You
 are very astute.
   </p>
-  
+
 
   <p>
     If you want a sidenote without footnote-style numberings, then you want a margin
@@ -631,32 +631,32 @@ number. This document currently uses the symbol ⊕ (
     ), but it’s up to
 you.
   </p>
-  
+
 
   <p>
     In his later books
     , Tufte starts each
 section with a bit of vertical space, a non-indented paragraph, and the first
 few words of the sentence set in small caps. For this we use a span with the
-class 
+class
     <code>
       newthought
     </code>
     , as demonstrated at the beginning of this paragraph. Vertical
-spacing is accomplished separately through 
+spacing is accomplished separately through
     <code>
       &lt;section&gt;
     </code>
      tags. Be consistent:
 though we do so in this paragraph for the purpose of demonstration, do not
-alternate use of header elements and the 
+alternate use of header elements and the
     <code>
       newthought
     </code>
      technique. Pick one
 approach and stick to it.
   </p>
-  
+
 
   <p>
      But tight integration of graphics with text is central to Tufte’s work
@@ -667,37 +667,37 @@ margin, just wrap an image (or whatever) in a margin note inside a
     p
      tag, as seen to the right of this paragraph.
   </p>
-  
+
 
   <p>
-    If you need a full-width figure, give it the 
+    If you need a full-width figure, give it the
     <code>
       fullwidth
     </code>
      class. Make sure that’s
-inside an 
+inside an
     <code>
       article
     </code>
     , and it will take up (almost) the full width of the screen.
 This approach is demonstrated below using Edward Tufte’s English translation of
-the Napoleon’s March data visualization. From 
+the Napoleon’s March data visualization. From
     <em>
       Beautiful Evidence
     </em>
     , page
 122–124.
   </p>
-  
+
 
   <img
     alt="Figurative map of the successive losses of the French Army in the Russian
 campaign, 1812-1813"
     src="https://placeimg.com/1000/600/tech"
   />
-  
 
-  
+
+
 
   <img
     alt="Exports and Imports to and from Denmark & Norway from 1700 to 1780"
@@ -715,7 +715,7 @@ extensive use of sidenotes, tight integration of graphics with text, and
 carefully chosen typography.
   </p>
   <p>
-    Tufte CSS was created by 
+    Tufte CSS was created by
     <a
       href="http://www.daveliepmann.com"
     >
@@ -734,8 +734,8 @@ The original idea was cribbed from
       e
       X
     </a>
-    
-and 
+
+and
     <a
       href="http://rmarkdown.rstudio.com/tufte_handout_format.html"
     >
@@ -746,14 +746,14 @@ all the people who have contributed to those projects.
   </p>
   <p>
     If you see anything that Tufte CSS could improve, we welcome your contribution
-in the form of an issue or pull request on the GitHub project: 
+in the form of an issue or pull request on the GitHub project:
     <a
       href="https://github.com/edwardtufte/tufte-css"
     >
       tufte-css
     </a>
     .
-Please note the 
+Please note the
     <a
       href="https://github.com/edwardtufte/tufte-css#contributing"
     >
@@ -771,7 +771,7 @@ to implement this particular set of ideas. It should be a starting point, not a
 design goal, because any project should present their information as best suits
 their particular circumstances.
   </p>
-  
+
 
   <h2
     id="user-content-getting-started"
@@ -779,20 +779,20 @@ their particular circumstances.
     Getting Started
   </h2>
   <p>
-    To use Tufte CSS, copy 
+    To use Tufte CSS, copy
     <code>
       tufte.css
     </code>
-     and the 
+     and the
     <code>
       et-book
     </code>
      directory of font files to
-your project directory, then add the following to your HTML document’s 
+your project directory, then add the following to your HTML document’s
     <code>
       head
     </code>
-    
+
 block:
   </p>
   <pre>
@@ -806,7 +806,7 @@ block:
 described in this document. For best results, View Source and Inspect Element
 frequently.
   </p>
-  
+
 
   <h2
     id="user-content-fundamentals"
@@ -819,40 +819,40 @@ frequently.
     Sections and Headings
   </h3>
   <p>
-    Organize your document with an 
+    Organize your document with an
     <code>
       article
     </code>
-     element inside your 
+     element inside your
     <code>
       body
     </code>
      tag. Inside
-that, use 
+that, use
     <code>
       section
     </code>
      tags around each logical grouping of text and headings.
   </p>
   <p>
-    Tufte CSS uses 
+    Tufte CSS uses
     <code>
       h1
     </code>
-     for the document title, 
+     for the document title,
     <code>
       p
     </code>
-     with class 
+     with class
     <code>
       subtitle
     </code>
      for the
-document subtitle, 
+document subtitle,
     <code>
       h2
     </code>
-     for section headings, and 
+     for section headings, and
     <code>
       h3
     </code>
@@ -861,7 +861,7 @@ More specific headings are not supported. If you feel the urge to reach for a
 heading of level 4 or greater, consider redesigning your document:
   </p>
   <blockquote>
-    
+
 
     <p>
       [
@@ -872,28 +872,28 @@ physics in 1800 pages, using only 2 levels of hierarchical headings: chapters
 and A-level heads in the text. It also uses the methodology of
 
       sentences
-       which then cumulate sequentially into 
+       which then cumulate sequentially into
       paragraphs
       ,
 rather than the grunts of bullet points. Undergraduate Caltech physics is very
 complicated material, but it didn’t require an elaborate hierarchy to
 organize.
     </p>
-    
+
 
   </blockquote>
   <p>
     As a bonus, this excerpt regarding the use of headings provides an example of
 block quotes. In Tufte CSS they are just lightly styled, semantically correct
-HTML using 
+HTML using
     <code>
       blockquote
     </code>
-     and 
+     and
     <code>
       footer
     </code>
-     elements. See page 20 of 
+     elements. See page 20 of
     <a
       href="https://www.edwardtufte.com/tufte/books_vdqi"
     >
@@ -907,18 +907,18 @@ Display of Quantitative Information
     , Tufte starts each
 section with a bit of vertical space, a non-indented paragraph, and the first
 few words of the sentence set in small caps. For this we use a span with the
-class 
+class
     <code>
       newthought
     </code>
     , as demonstrated at the beginning of this paragraph. Vertical
-spacing is accomplished separately through 
+spacing is accomplished separately through
     <code>
       &lt;section&gt;
     </code>
      tags. Be consistent:
 though we do so in this paragraph for the purpose of demonstration, do not
-alternate use of header elements and the 
+alternate use of header elements and the
     <code>
       newthought
     </code>
@@ -933,11 +933,11 @@ approach and stick to it.
   <p>
     Although paper handouts obviously have a pure white background, the web is
 better served by the use of slightly off-white and off-black colors. Tufte CSS
-uses 
+uses
     <code>
       #fffff8
     </code>
-     and 
+     and
     <code>
       #111111
     </code>
@@ -956,7 +956,7 @@ effect is achieved in digital formats with the now open-source
     >
       ETBook
     </a>
-    , which Tufte CSS supplies with a 
+    , which Tufte CSS supplies with a
     <code>
       @font-face
     </code>
@@ -971,7 +971,7 @@ the text. This is typographic best practice.
   </p>
   <p>
     Links in Tufte CSS match the body text in color and do not change on mouseover
-or when clicked. Here is a 
+or when clicked. Here is a
     <a
       href="#"
     >
@@ -979,7 +979,7 @@ or when clicked. Here is a
     </a>
      that goes nowhere. These links are
 underlined, since this is the most widely recognized indicator of clickable
-text. 
+text.
      However, because most browsers’ default underlining does not clear
 descenders and is so thick and distracting, the underline effect is instead
 achieved using CSS trickery involving background gradients instead of standard
@@ -997,7 +997,7 @@ be made to work. The goal is to make sentences readable without interference
 from links, as well as to make links immediately identifiable even by casual web
 users.
   </p>
-  
+
 
   <h2
     id="user-content-epigraphs"
@@ -1005,33 +1005,33 @@ users.
     Epigraphs
   </h2>
   <blockquote>
-    
+
 
     <p>
       The English language . . . becomes ugly and inaccurate because our thoughts
 are foolish, but the slovenliness of our language makes it easier for us to
 have foolish thoughts.
     </p>
-    
+
 
   </blockquote>
   <blockquote>
-    
+
 
     <p>
       For a successful technology, reality must take precedence over public
 relations, for Nature cannot be fooled.
     </p>
-    
+
 
   </blockquote>
   <blockquote>
-    
+
 
     <p>
       I do not paint things, I paint only the differences between things.
     </p>
-    
+
 
   </blockquote>
   <p>
@@ -1041,17 +1041,17 @@ use epigraphs. Modeled after chapter epigraphs in Tufte’s books (particularly
     <em>
       Beautiful Evidence
     </em>
-    ), these are 
+    ), these are
     <code>
       blockquote
     </code>
      elements with a bit of specialized
-styling. Quoted text is italicized. The source goes in a 
+styling. Quoted text is italicized. The source goes in a
     <code>
       footer
     </code>
      element inside
-the 
+the
     <code>
       blockquote
     </code>
@@ -1060,7 +1060,7 @@ section, demonstrating shorter and longer quotes, with and without a paragraph
 tag, and showing how multiple quotes within an epigraph fit together with the
 use of a wrapper class.
   </p>
-  
+
 
   <h2
     id="user-content-sidenotes-footnotes-and-marginal-notes"
@@ -1080,7 +1080,7 @@ are very astute.
 large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and
 small figures. On smaller viewports, elements that would go in the margin are
 hidden until the user toggles them into view. The goal is to present related but
-not necessary information such as asides or citations 
+not necessary information such as asides or citations
     <em>
       as close as possible
     </em>
@@ -1107,25 +1107,25 @@ so:
     </code>
   </pre>
   <p>
-    You must manually assign a reference 
+    You must manually assign a reference
     <code>
       id
     </code>
      to each side or margin note, replacing
-“sn-demo” in the 
+“sn-demo” in the
     <code>
       for
     </code>
-     and the 
+     and the
     <code>
       id
     </code>
      attribute values with an appropriate
-descriptor. It is useful to use prefixes like 
+descriptor. It is useful to use prefixes like
     <code>
       sn-
     </code>
-     for sidenotes and 
+     for sidenotes and
     <code>
       mn-
     </code>
@@ -1134,11 +1134,11 @@ margin notes.
   </p>
   <p>
     Immediately adjacent to that sidenote reference in the main text goes the
-sidenote content itself, in a 
+sidenote content itself, in a
     <code>
       span
     </code>
-     with class 
+     with class
     <code>
       sidenote
     </code>
@@ -1163,12 +1163,12 @@ number. This document currently uses the symbol ⊕ (
 you.
   </p>
   <p>
-    Margin notes are created just like sidenotes, but with the 
+    Margin notes are created just like sidenotes, but with the
     <code>
       marginnote
     </code>
      class
-for the content and the 
+for the content and the
     <code>
       margin-toggle
     </code>
@@ -1190,7 +1190,7 @@ paragraph:
     Figures in the margin are created as margin notes, as demonstrated in the next
 section.
   </p>
-  
+
 
   <h2
     id="user-content-figures"
@@ -1205,7 +1205,7 @@ graphics and their accompanying text without extra clicks, tab-switching, or
 scrolling.
   </p>
   <p>
-    Figures should try to use the 
+    Figures should try to use the
     <code>
       figure
     </code>
@@ -1215,7 +1215,7 @@ note goes in a regular margin note inside the figure. For example, most of the
 time one should introduce a figure directly into the main flow of discussion,
 like so:
   </p>
-  
+
 
   <img
     alt="Exports and Imports to and from Denmark & Norway from 1700 to 1780"
@@ -1231,18 +1231,18 @@ margin, just wrap an image (or whatever) in a margin note inside a
      tag, as seen to the right of this paragraph.
   </p>
   <p>
-    If you need a full-width figure, give it the 
+    If you need a full-width figure, give it the
     <code>
       fullwidth
     </code>
      class. Make sure that’s
-inside an 
+inside an
     <code>
       article
     </code>
     , and it will take up (almost) the full width of the screen.
 This approach is demonstrated below using Edward Tufte’s English translation of
-the Napoleon’s March data visualization. From 
+the Napoleon’s March data visualization. From
     <em>
       Beautiful Evidence
     </em>
@@ -1254,7 +1254,7 @@ the Napoleon’s March data visualization. From
 campaign, 1812-1813"
     src="https://placeimg.com/1000/600/tech"
   />
-  
+
 
   <h2
     id="user-content-code"
@@ -1263,7 +1263,7 @@ campaign, 1812-1813"
   </h2>
   <p>
     Technical jargon, programming language terms, and code samples are denoted with
-the 
+the
     <code>
       code
     </code>
@@ -1274,11 +1274,11 @@ selection, which shifts gracefully along the monospace spectrum from the elegant
 but rare Consolas all the way to good old reliable Courier.
   </p>
   <p>
-    Extended code examples should use a 
+    Extended code examples should use a
     <code>
       pre
     </code>
-     tag with class 
+     tag with class
     <code>
       code
     </code>
@@ -1307,7 +1307,7 @@ control over indentation and overflow as well:
 
     </code>
   </pre>
-  
+
 
   <h2
     id="user-content-imagequilts"
@@ -1315,14 +1315,14 @@ control over indentation and overflow as well:
     ImageQuilts
   </h2>
   <p>
-    Tufte CSS provides support for Edward Tufte and Adam Schwartz’s 
+    Tufte CSS provides support for Edward Tufte and Adam Schwartz’s
     <a
       href="http://imagequilts.com/"
     >
       ImageQuilts
     </a>
     .
-See the 
+See the
     <a
       href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003wk"
     >
@@ -1330,7 +1330,7 @@ See the
     </a>
      for more on quilts. Some
 have ragged edges, others straight. Include these images just as you would any
-other 
+other
     <code>
       figure
     </code>
@@ -1353,7 +1353,7 @@ course still rectangular.
     alt="Image of animal sounds"
     src="https://edwardtufte.github.io/tufte-css/img/imagequilt-animal-sounds.png"
   />
-  
+
 
   <h2
     id="user-content-epilogue"
