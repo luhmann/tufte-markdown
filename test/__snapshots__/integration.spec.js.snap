@@ -9,7 +9,7 @@ exports[`with target HTML should convert "code.md" correctly 1`] = `
 `;
 
 exports[`with target HTML should convert "figures.md" correctly 1`] = `
-"<section class=\\"level2\\"><h2 id=\\"figures\\">Figures</h2><p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and
+"<section><h2 id=\\"figures\\">Figures</h2><p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and
 figures are kept with the text that discusses them. In print, this means they
 are not relegated to a separate page. On the web, that means readability of
 graphics and their accompanying text without extra clicks, tab-switching, or
@@ -24,7 +24,7 @@ campaign, 1812-1813\\"></figure></section>
 `;
 
 exports[`with target HTML should convert "section.md" correctly 1`] = `
-"<section class=\\"level2\\"><p>Tufte CSS provides tools to style web articles using the ideas demonstrated by
+"<section><p>Tufte CSS provides tools to style web articles using the ideas demonstrated by
 Edward Tufte’s books and handouts. Tufte’s style is known for its simplicity,
 extensive use of sidenotes, tight integration of graphics with text, and
 carefully chosen typography.</p><p>Tufte CSS was created by <a href=\\"http://www.daveliepmann.com\\">Dave Liepmann</a> and is now an Edward Tufte project.
@@ -42,13 +42,13 @@ maybe you can find a way to make them useful on the web\\". Tufte CSS is merely
 a sketch of one way to implement this particular set of ideas. It should be a
 starting point, not a design goal, because any project should present their
 information as best suits their particular circumstances.</p></section>
-<section class=\\"level2\\"><h2 id=\\"getting-started\\">Getting Started</h2><p>To use Tufte CSS, copy <code>tufte.css</code> and the <code>et-book</code> directory of font files to
+<section><h2 id=\\"getting-started\\">Getting Started</h2><p>To use Tufte CSS, copy <code>tufte.css</code> and the <code>et-book</code> directory of font files to
 your project directory, then add the following to your HTML document’s <code>head</code>
 block:</p><pre><code>&#x3C;link rel=\\"stylesheet\\" href=\\"tufte.css\\"/>
 </code></pre><p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions
 described in this document. For best results, View Source and Inspect Element
 frequently.</p></section>
-<section class=\\"level2\\"><h2 id=\\"fundamentals\\">Fundamentals</h2><h3 id=\\"sections-and-headings\\">Sections and Headings</h3><p>Organize your document with an <code>article</code> element inside your <code>body</code> tag. Inside
+<section><h2 id=\\"fundamentals\\">Fundamentals</h2><h3 id=\\"sections-and-headings\\">Sections and Headings</h3><p>Organize your document with an <code>article</code> element inside your <code>body</code> tag. Inside
 that, use <code>section</code> tags around each logical grouping of text and headings.</p><p>Tufte CSS uses <code>h1</code> for the document title, <code>p</code> with class <code>subtitle</code> for the
 document subtitle, <code>h2</code> for section headings, and <code>h3</code> for low-level headings.
 More specific headings are not supported. If you feel the urge to reach for a
@@ -122,7 +122,7 @@ campaign, 1812-1813\\"></figure>
 `;
 
 exports[`with target HTML should convert "tufte.md" correctly 1`] = `
-"<section class=\\"level2\\"><p>Tufte CSS provides tools to style web articles using the ideas demonstrated by
+"<section><p>Tufte CSS provides tools to style web articles using the ideas demonstrated by
 Edward Tufte’s books and handouts. Tufte’s style is known for its simplicity,
 extensive use of sidenotes, tight integration of graphics with text, and
 carefully chosen typography.</p><p>Tufte CSS was created by <a href=\\"http://www.daveliepmann.com\\">Dave Liepmann</a> and is now an Edward Tufte project.
@@ -140,13 +140,13 @@ a way to make them useful on the web\\". Tufte CSS is merely a sketch of one way
 to implement this particular set of ideas. It should be a starting point, not a
 design goal, because any project should present their information as best suits
 their particular circumstances.</p></section>
-<section class=\\"level2\\"><h2 id=\\"getting-started\\">Getting Started</h2><p>To use Tufte CSS, copy <code>tufte.css</code> and the <code>et-book</code> directory of font files to
+<section><h2 id=\\"getting-started\\">Getting Started</h2><p>To use Tufte CSS, copy <code>tufte.css</code> and the <code>et-book</code> directory of font files to
 your project directory, then add the following to your HTML document’s <code>head</code>
 block:</p><pre><code>&#x3C;link rel=\\"stylesheet\\" href=\\"tufte.css\\"/>
 </code></pre><p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions
 described in this document. For best results, View Source and Inspect Element
 frequently.</p></section>
-<section class=\\"level2\\"><h2 id=\\"fundamentals\\">Fundamentals</h2><h3 id=\\"sections-and-headings\\">Sections and Headings</h3><p>Organize your document with an <code>article</code> element inside your <code>body</code> tag. Inside
+<section><h2 id=\\"fundamentals\\">Fundamentals</h2><h3 id=\\"sections-and-headings\\">Sections and Headings</h3><p>Organize your document with an <code>article</code> element inside your <code>body</code> tag. Inside
 that, use <code>section</code> tags around each logical grouping of text and headings.</p><p>Tufte CSS uses <code>h1</code> for the document title, <code>p</code> with class <code>subtitle</code> for the
 document subtitle, <code>h2</code> for section headings, and <code>h3</code> for low-level headings.
 More specific headings are not supported. If you feel the urge to reach for a
@@ -196,7 +196,7 @@ using highlighting or color instead of underlining to denote links, could also
 be made to work. The goal is to make sentences readable without interference
 from links, as well as to make links immediately identifiable even by casual web
 users.</p></section>
-<section class=\\"level2\\"><h2 id=\\"epigraphs\\">Epigraphs</h2><div class=\\"epigraph\\"><blockquote>
+<section><h2 id=\\"epigraphs\\">Epigraphs</h2><div class=\\"epigraph\\"><blockquote>
 <p>The English language . . . becomes ugly and inaccurate because our thoughts
 are foolish, but the slovenliness of our language makes it easier for us to
 have foolish thoughts.</p>
@@ -219,7 +219,7 @@ the <code>blockquote</code>. We have provided three examples in the epigraph of 
 section, demonstrating shorter and longer quotes, with and without a paragraph
 tag, and showing how multiple quotes within an epigraph fit together with the
 use of a wrapper class.</p></section>
-<section class=\\"level2\\"><h2 id=\\"sidenotes-footnotes-and-marginal-notes\\">Sidenotes: Footnotes and Marginal Notes</h2><p>One of the most distinctive features of Tufte’s style is his extensive use of
+<section><h2 id=\\"sidenotes-footnotes-and-marginal-notes\\">Sidenotes: Footnotes and Marginal Notes</h2><p>One of the most distinctive features of Tufte’s style is his extensive use of
 sidenotes.<label for=\\"sd-this-is-a-sidenote\\" class=\\"margin-toggle sidenote-number\\"></label><input type=\\"checkbox\\" id=\\"sd-this-is-a-sidenote\\" class=\\"margin-toggle\\" /><span class=\\"sidenote\\">This is a sidenote.</span> Sidenotes are like footnotes, except they don’t force the reader
 to jump their eye to the bottom of the page, but instead display off to the side
 in the margin. Perhaps you have noticed their use in this document already. You
@@ -263,7 +263,7 @@ paragraph:</p><pre><code>&#x3C;label for=\\"mn-demo\\" class=\\"margin-toggle\\"
 &#x3C;/span>
 </code></pre><p>Figures in the margin are created as margin notes, as demonstrated in the next
 section.</p></section>
-<section class=\\"level2\\"><h2 id=\\"figures\\">Figures</h2><p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and
+<section><h2 id=\\"figures\\">Figures</h2><p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and
 figures are kept with the text that discusses them. In print, this means they
 are not relegated to a separate page. On the web, that means readability of
 graphics and their accompanying text without extra clicks, tab-switching, or
@@ -282,7 +282,7 @@ This approach is demonstrated below using Edward Tufte’s English translation o
 the Napoleon’s March data visualization. From <em>Beautiful Evidence</em>, page
 122–124.</p><figure class=\\"fullwidth\\"><img src=\\"https://placeimg.com/1000/600/tech\\" alt=\\"Figurative map of the successive losses of the French Army in the Russian
 campaign, 1812-1813\\"></figure></section>
-<section class=\\"level2\\"><h2 id=\\"code\\">Code</h2><p>Technical jargon, programming language terms, and code samples are denoted with
+<section><h2 id=\\"code\\">Code</h2><p>Technical jargon, programming language terms, and code samples are denoted with
 the <code>code</code> class, as I’ve been using in this document to denote HTML. Code needs
 to be monospace for formatting purposes and to aid in code analysis, but it must
 maintain its readability. To those ends, Tufte CSS follows GitHub’s font
@@ -306,14 +306,14 @@ control over indentation and overflow as well:</p><pre><code>;; Some code exampl
 ;; If this proselytizing has worked, check out:
 ;; http://howistart.org/posts/clojure/1
 </code></pre></section>
-<section class=\\"level2\\"><h2 id=\\"imagequilts\\">ImageQuilts</h2><p>Tufte CSS provides support for Edward Tufte and Adam Schwartz’s <a href=\\"http://imagequilts.com/\\">ImageQuilts</a>.
+<section><h2 id=\\"imagequilts\\">ImageQuilts</h2><p>Tufte CSS provides support for Edward Tufte and Adam Schwartz’s <a href=\\"http://imagequilts.com/\\">ImageQuilts</a>.
 See the <a href=\\"http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003wk\\">ET forum announcement thread</a> for more on quilts. Some
 have ragged edges, others straight. Include these images just as you would any
 other <code>figure</code>.</p><p>This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width
 figure to accomodate its girth:</p><figure class=\\"fullwidth\\"><img src=\\"https://edwardtufte.github.io/tufte-css/img/imagequilt-chinese-calligraphy.png\\" alt=\\"Image of Chinese Calligraphy\\"></figure><p>Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained
 to the main text region. This quilt has ragged edges, but the image itself is of
 course still rectangular.</p><figure><img src=\\"https://edwardtufte.github.io/tufte-css/img/imagequilt-animal-sounds.png\\" alt=\\"Image of animal sounds\\"></figure></section>
-<section class=\\"level2\\"><h2 id=\\"epilogue\\">Epilogue</h2><p>Many thanks go to Edward Tufte for leading the way with his work. It is only
+<section><h2 id=\\"epilogue\\">Epilogue</h2><p>Many thanks go to Edward Tufte for leading the way with his work. It is only
 through his kind and careful editing that this project accomplishes what it
 does. All errors of implementation are of course mine.</p></section>
 "
