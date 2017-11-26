@@ -10,7 +10,9 @@
     "build": "lerna run --parallel build",
     "release":
       "npm run build && lerna publish --registry=https://registry.npmjs.org/",
-    "test": "cross-env NODE_ENV=test jest --config .jestrc.json"
+    "test": "cross-env NODE_ENV=test jest --config .jestrc.json",
+    "test:ci":
+      "cross-env NODE_ENV=test npm run build && jest --config .jestrc.json"
   },
   "keywords": [
     "tufte",
