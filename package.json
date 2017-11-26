@@ -6,7 +6,6 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "postinstall": "lerna bootstrap",
     "build": "lerna run --parallel build",
     "release":
       "npm run build && lerna publish --registry=https://registry.npmjs.org/",
