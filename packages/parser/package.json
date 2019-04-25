@@ -1,6 +1,6 @@
 {
   "name": "@tufte-markdown/parser",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A markdown parser that output html that is compatible with tufte-css",
   "main": "dist/parser.cjs.js",
   "module": "dist/parser.es.js",
@@ -41,7 +41,7 @@
     "@tufte-markdown/remark-figure-parser": "^1.0.0",
     "@tufte-markdown/remark-figure-transformer": "^1.0.0",
     "@tufte-markdown/remark-sidenotes": "^1.0.0",
-    "@tufte-markdown/remark-wrap-in-section": "^1.0.0",
+    "@tufte-markdown/remark-wrap-in-section": "^2.0.0",
     "react": "^16.1.1",
     "remark-highlight.js": "^5.0.0",
     "remark-html": "^6.0.1",
