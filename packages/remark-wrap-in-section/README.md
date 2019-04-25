@@ -40,13 +40,13 @@ sanctus est Lorem ipsum dolor sit amet.
 becomes
 
 ```html
-<section class="level2">
+<section>
   <p>
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
     tempor invidunt ut labore et dolore magna aliquyam eratx
   </p>
 </section>
-<section class="level2">
+<section>
   <h2>Heading 2</h2>
   <h3>Heading 3</h3>
   <h4>Heading 4</h4>
@@ -61,7 +61,7 @@ becomes
       sanctus est Lorem ipsum dolor sit amet.
   </p>
 </section>
-<section class="level2">
+<section>
   <h2>Heading 2</h2>
   <h3>Heading 3</h3>
     <p>
